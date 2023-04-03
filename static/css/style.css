@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+.file-label {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button {
+  display: block;
+  margin-top: 1rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.result {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.result-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.result-value {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.predicted-image {
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+}

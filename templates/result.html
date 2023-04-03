@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dog Breed Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Dog Breed Classifier</h1>
+      <div class="result">
+        <h2 class="result-label">Predicted Label:</h2>
+        <p class="result-value">{{ predicted_label }}</p>
+        <h2 class="result-label">Breed Name:</h2>
+        <p class="result-value">{{ breed_name }}</p>
+        <div class="image-container">
+          <img src="data:image/png;base64,{{ image }}" class="predicted-image">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
