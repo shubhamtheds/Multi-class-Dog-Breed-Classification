@@ -55,12 +55,13 @@ def predict_image():
     filename = secure_filename(file.filename)
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-    # Check if the file is a JPG image and convert it to PNG format
-    if file and file.filename.endswith('.jpg'):
+    # Check if the file is a JPG or JPEG image and convert it to PNG format
+    if file and file.filename.lower().endswith(('.jpg', '.jpeg')):
         image = Image.open(file)
         file_path = file_path.replace('.jpg', '.png')
+        file_path = file_path.replace('.jpeg', '.png')
         image.save(file_path)
-    elif file and file.filename.endswith('.png'):
+    elif file and file.filename.lower().endswith('.png'):
         file.save(file_path)
     else:
         return render_template("index.html", error="Invalid file format. Please upload a JPG or PNG image.")

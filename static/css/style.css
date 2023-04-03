@@ -7,15 +7,13 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  background-color: #8FD8D8;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -34,6 +32,7 @@ body {
 .file-label {
   display: inline-block;
   margin-top: 1rem;
+  margin-right: 1rem;
   background-color: #333;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -42,7 +41,7 @@ body {
 }
 
 .submit-button {
-  display: block;
+  display: inline-block;
   margin-top: 1rem;
   background-color: #333;
   color: #fff;
@@ -81,7 +80,9 @@ body {
 }
 
 .predicted-image {
-  max-width: 400px;
-  height: auto;
-  border-radius: 5px;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 20px;
 }

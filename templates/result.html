@@ -5,15 +5,42 @@
     <title>Dog Breed Classifier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+      /* Center the elements */
+      .container {
+        text-align: center;
+      }
+
+      /* Increase the font size of the breed name */
+      .breed-name {
+        font-size: 24px;
+      }
+
+      /* Set the size and shape of the predicted image */
+      .predicted-image {
+        width: 600px;
+        height: 400px;
+        object-fit: contain;
+        object-position: center;
+        margin-top: 20px;
+      }
+
+      /* Set the size of the original image */
+      .original-image {
+        width: 600px;
+        height: 400px;
+        object-fit: contain;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1 class="title">Dog Breed Classifier</h1>
       <div class="result">
-        <h2 class="result-label">Predicted Label:</h2>
-        <p class="result-value">{{ predicted_label }}</p>
-        <h2 class="result-label">Breed Name:</h2>
-        <p class="result-value">{{ breed_name }}</p>
+        {% if breed_name %}
+        <p class="result-value breed-name">Hi! Human👋 I am of {{ breed_name }} breed, nice to meet you.</p>
+        {% endif %}
         <div class="image-container">
           <img src="data:image/png;base64,{{ image }}" class="predicted-image">
         </div>
