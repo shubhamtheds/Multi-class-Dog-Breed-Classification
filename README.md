@@ -1,22 +1,31 @@
-# 🐶 End-to-end Multi-class Dog Breed Classification
-This notebook builds an end-to-end multi-class image classifier using `TensorFlow 2.x` and `TensorFlow Hub`.
+# DOGGO-CLASSIFIER🐕
 
-## 1. Problem
-Identifying the breed of a dog given an image of a dog.
+## Multi-class Dog Breed Classification using Convolutional Neural Networks (CNN)
+This project is a multi-class classification task to identify the breed of a dog from an image using Convolutional Neural Networks (CNN). The dataset used for this task is the Stanford Dogs Dataset, which contains 20,580 images of 120 dog breeds.
 
-When I'm sitting at the cafe and I take a photo of a dog, I want to know what breed of dog it is.
+**The project is implemented in Python 3.7 using the following libraries:**
+- TensorFlow 2.5.0
+- Keras 2.4.3
+- NumPy 1.19.5
+- Matplotlib 3.3.4
+- Scikit-learn 0.24.2
 
-## 2. Data
-The data we're using is from Kaggle's dog breed identification competition.
+**The project consists of the following files:**
+- Dog_vision.ipynb: Jupyter Notebook containing the implementation of the CNN model and training process.
+- model.png: Image of the CNN model architecture.
+- requirements.txt: File containing the required libraries for running the project.
 
-`https://www.kaggle.com/c/dog-breed-identification/data`
+## Installation 📦
+To install the required libraries, run the following command:
+pip install -r requirements.txt
 
-## 3. Evaluation
-The evaluation is a file with prediction probabilities for each dog breed of each test image.
+## Usage 👩‍🎨
+To run the project, open the Dog_vision.ipynb notebook and run the cells. The notebook contains step-by-step instructions on how to download and preprocess the dataset, build and train the CNN model, and evaluate the performance of the model.
 
-`https://www.kaggle.com/c/dog-breed-identification/overview/evaluation`
+## Results 💯
+The trained model achieved an accuracy of 80.83% on the test set. The model was able to correctly classify the breed of the dog in most cases, but struggled with some breeds that look similar. The model can be further improved by using more advanced techniques such as data augmentation, transfer learning, and ensembling.
 
-## 4. Features
-Some information about the data:
-
-We're dealing with `images` (unstructured data) so it's probably best we use `deep learning/transfer learning`. There are `120` breeds of dogs (this means there are 120 different classes). There are around `10,000+ images` in the training set (these images have labels). There are around 10,000+ images in the test set (these images have no labels, because we'll want to predict them).
+## Credits 💌
+The implementation of the CNN model is based on the following resources:
+[TensorFlow CNN Tutorial](https://www.tensorflow.org/tutorials/images/cnn)
+[Convolutional Neural Networks (CNNs) for Image Classification](https://www.coursera.org/learn/convolutional-neural-networks/home/welcome) by Andrew Ng on Coursera.
